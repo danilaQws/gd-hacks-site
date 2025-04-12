@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GD-hacks</title>
+        <link rel="stylesheet" href="gui.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <!-- Главный заголовок в контейнере -->
+        <div class="main-header-container">
+            <h1>GH-Hack Downloader.</h1>
+            <h2>Site coded by normusky 12.04.2025.</h2>
+            <div class="icon-buttons">
+                <a href="https://t.me/normusky_hack" class="icon-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-telegram" aria-hidden="true"></i>
+                </a>
+                <a href="https://youtube.com/channel/UCCBtdKOdyp-H2ZWKe2fMKaA?si=9KhLpWeN0qIuIb44" class="icon-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+                <button class="icon-btn" id="downloadBtn">
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="CHEAT-IMAGE.png" alt="CHEAT-IMAGE">
+        </div>
+
+        <!-- Первая секция -->
+        <div class="section-container">
+            <h2>How to Install and Inject</h2>
+            <p>1. First, download the latest version of gd-hacks by visiting the releases page.
+               <br><br>
+               2. Move the files gd-hacks.dll and libExtensions.dll to the folder where Geometry Dash is located. After completing this step, launch the game and press TAB.</p>
+        </div>
+
+        <!-- Вторая секция -->
+        <div class="section-container">
+            <h2>How to Compile (x32, CMake)</h2>
+            <p>If you prefer to compile GD-Hacks from the source code, follow these steps:</p>
+            <ol class="list">
+                <li>Ensure you have CMake installed on your system.</li>
+            <br>
+            <li>Clone the GD-Hacks repository to your local machine.
+            <br><br>
+            <i>git clone https://github.com/Skyue1/gd-hacks.git</i></li>
+            <br>
+            <li>Navigate to the cloned repository.
+            <br><br>
+            <i>cd gd-hacks</i></li>
+            <br>
+            <li>Create a build directory.
+            <br><br>
+            <i>mkdir build
+            cd build</i></li>
+            <br>
+            <li>Run CMake to generate build files.
+            <br><br>
+            <i>cmake ..</i></li>
+            <br>
+            <li>Compile the project.
+            <br><br>
+            <i>make</i></li>
+            <br>
+            <li>After a successful compilation, you will find the compiled gd-hacks.dll in the build directory. Move these files to the Geometry Dash folder, as mentioned in the "How to Install and Inject" section.</li>
+            </ol>
+            <p>Now you have a freshly compiled version of GD-Hacks ready for use.</p>
+        </div>
+
+        <!-- Секция Installation methods -->
+        <div class="section-container" id="installation-methods">
+            <h2>Installation methods:</h2>
+            
+            <div class="installation-method">
+                <p>1. Install dll GD-Hack (.zip):</p>
+                <div class="download-btn">
+                    <button class="download-button" id="downloadDll">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="installation-method">
+                <p>2. Install cpp Source Code (.zip):</p>
+                <div class="download-btn">
+                    <button class="download-button" id="downloadSource">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

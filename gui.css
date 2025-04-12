@@ -1,0 +1,523 @@
+body {
+    background-color: black;
+    color: aliceblue;
+}
+
+h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    animation: glitch 2s infinite;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    animation: glitch 2s infinite;
+    letter-spacing: 3px;
+}
+
+
+.list {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    animation: glitch 2s infinite;
+    letter-spacing: 1px; 
+}
+
+.list li {
+    text-align: left; /* Выравниваем текст по левому краю */
+    margin-left: 0;
+}
+
+p {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    animation: glitch 2s infinite;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+img {
+    display: block;
+    width: auto; /* Автоматическая ширина (оригинальный размер) */
+    max-width: 600px; /* Максимальная ширина (можно настроить) */
+    height: auto; /* Автоматическая высота (сохраняет пропорции) */
+    margin: 30px auto; /* Центрирование по горизонтали + отступы */
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    filter: brightness(0.9) contrast(1.1);
+    object-fit: contain; /* Сохраняет пропорции */
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 15px #fff,
+        0 0 30px rgba(255, 0, 255, 0.7),
+        0 0 45px rgba(0, 255, 255, 0.7);
+    animation: glitch-img 0.8s infinite alternate;
+    filter: 
+        brightness(1.1) 
+        contrast(1.2) 
+        drop-shadow(0 0 5px #ff00ff) 
+        drop-shadow(0 0 10px #00ffff)
+        hue-rotate(5deg);
+}
+
+#methods {
+    margin-top: 10%;
+}
+
+.download-btn {
+    display: flex;
+    gap: 15px; 
+    padding: 20px;
+    justify-content: center;
+}
+
+.download-button {
+    width: 450px;
+    height: 50px;
+    background-color: #000; 
+    border: 2px solid #fff; 
+    border-radius: 10px; 
+    color: white; 
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    overflow: hidden;
+    text-decoration: none;
+
+}
+
+.download-button:hover {
+    background-color: #222;
+    transform: scale(1.1);
+}
+
+.download-button:active {
+    transform: scale(0.95);
+}
+
+.download-button.clicked {
+    transform: scale(0.95);
+    background-color: #ff00ff;
+    transition: all 0.2s ease;
+}
+
+.download-button.clicked i {
+    animation: none;
+    color: #000;
+}
+
+.download-button::before,
+.download-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.download-button::before {
+    box-shadow: 0 0 10px 2px #ff00ff;
+    animation: glitch-btn 2s infinite;
+}
+
+.download-button::after {
+    box-shadow: 0 0 10px 2px #00ffff;
+    animation: glitch-btn 2s infinite 0.2s;
+}
+
+.download-button i {
+    position: relative;
+    animation: glitch-icon 2s infinite;
+}
+
+
+.icon-buttons {
+    display: flex;
+    gap: 15px; 
+    padding: 20px;
+    justify-content: center;
+}
+
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #000; 
+    border: 2px solid #fff; 
+    border-radius: 50%; 
+    color: white; 
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    overflow: hidden;
+
+}
+
+.icon-btn:hover {
+    background-color: #222;
+    transform: scale(1.1);
+}
+
+.icon-btn:active {
+    transform: scale(0.95);
+}
+
+.icon-btn::before,
+.icon-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.icon-btn::before {
+    box-shadow: 0 0 10px 2px #ff00ff;
+    animation: glitch-btn 2s infinite;
+}
+
+.icon-btn::after {
+    box-shadow: 0 0 10px 2px #00ffff;
+    animation: glitch-btn 2s infinite 0.2s;
+}
+
+.icon-btn i {
+    position: relative;
+    animation: glitch-icon 2s infinite;
+}
+
+.main-header-container {
+    border: 2px solid #ff00ff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    text-align: center;
+    transition: all 0.3s ease
+}
+
+.main-header-container::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: -1;
+    animation: glitch-border 3s infinite;
+}
+
+
+.installation-method {
+    transition: all 0.3s ease;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border-left: 3px solid #ff00ff;
+    border-right: 3px solid #00ffff;
+}
+
+/* Улучшаем стиль кнопок внутри контейнера */
+.section-container .download-btn {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* Эффекты при наведении на контейнеры */
+.main-header-container:hover,
+.section-container:hover {
+    box-shadow: 
+        0 0 25px #ff00ff,
+        0 0 45px rgba(255, 0, 255, 0.5),
+        0 0 65px rgba(0, 255, 255, 0.3);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+/* Анимация для главного заголовка */
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+    }
+}
+
+.section-container {
+    transition: all 0.3s ease;
+    border: 2px solid #ff00ff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+.section-container::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: -1;
+    animation: glitch-border 3s infinite;
+}
+
+
+
+.image-container {
+    transition: all 0.3s ease;
+    border: 2px solid #ff00ff;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 30px auto;
+    max-width: 800px; /* Учитываем padding и border */
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    text-align: center;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: -1;
+    animation: glitch-border 3s infinite;
+}
+
+.image-container:hover {
+    box-shadow: 
+        0 0 25px #ff00ff,
+        0 0 45px rgba(255, 0, 255, 0.5),
+        0 0 65px rgba(0, 255, 255, 0.3);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+.image-container img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    box-shadow: none;
+    filter: grayscale(100%) brightness(0.8) contrast(1.1); /* Черно-белый эффект */
+    transition: all 0.5s ease; /* Убираем старую тень */
+}
+
+/* Обновляем hover эффекты для изображения */
+.image-container:hover img {
+    transform: scale(1.03);
+    filter: 
+        grayscale(0%) /* Убираем черно-белый эффект */
+        brightness(1.1) 
+        contrast(1.2) 
+        drop-shadow(0 0 5px #ff00ff) 
+        drop-shadow(0 0 10px #00ffff)
+        hue-rotate(5deg);
+    transition: all 0.5s ease;
+}
+
+
+
+
+@keyframes glitch-border {
+    0%, 100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+    25% {
+        opacity: 0.8;
+        transform: translate(-3px, 3px);
+    }
+    50% {
+        opacity: 0.9;
+        transform: translate(3px, -3px);
+    }
+    75% {
+        opacity: 0.7;
+        transform: translate(-2px, 2px);
+    }
+}
+/* animations */
+
+@keyframes glitch-anim {
+    0% {
+        clip-path: inset(0 0 98% 0);
+        transform: scale(1.08) translate(0);
+    }
+    10% {
+        clip-path: inset(15% 0 30% 0);
+        transform: scale(1.08) translate(-5px, 3px);
+    }
+    20% {
+        clip-path: inset(80% 0 5% 0);
+        transform: scale(1.08) translate(4px, -2px);
+    }
+    30% {
+        clip-path: inset(10% 0 60% 0);
+        transform: scale(1.08) translate(-3px, 1px);
+    }
+    40% {
+        clip-path: inset(50% 0 30% 0);
+        transform: scale(1.08) translate(2px, -4px);
+    }
+    50% {
+        clip-path: inset(25% 0 55% 0);
+        transform: scale(1.08) translate(-6px, 3px);
+    }
+    60% {
+        clip-path: inset(70% 0 10% 0);
+        transform: scale(1.08) translate(5px, -1px);
+    }
+    70% {
+        clip-path: inset(5% 0 80% 0);
+        transform: scale(1.08) translate(-2px, 4px);
+    }
+    80% {
+        clip-path: inset(40% 0 40% 0);
+        transform: scale(1.08) translate(3px, -3px);
+    }
+    90% {
+        clip-path: inset(90% 0 2% 0);
+        transform: scale(1.08) translate(-4px, 2px);
+    }
+    100% {
+        clip-path: inset(0 0 98% 0);
+        transform: scale(1.08) translate(0);
+    }
+}
+
+
+@keyframes glitch {
+    0%, 100% {
+      text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+    }
+    25% {
+      text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+    }
+    50% {
+      text-shadow: 3px 0 #ff00ff, -3px 0 #00ffff;
+    }
+    75% {
+      text-shadow: -1px 0 #ff00ff, 1px 0 #00ffff;
+    }
+  }
+
+
+  @keyframes glitch-btn {
+    0%, 100% {
+        opacity: 0;
+        transform: translate(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        opacity: 0.8;
+        transform: translate(-2px, 2px);
+    }
+    20%, 40%, 60%, 80% {
+        opacity: 0.8;
+        transform: translate(2px, -2px);
+    }
+}
+
+
+@keyframes glitch-icon {
+    0%, 100% {
+        text-shadow: 1px 0 #ff00ff, -1px 0 #00ffff;
+    }
+    25% {
+        text-shadow: -1px 0 #ff00ff, 1px 0 #00ffff;
+    }
+    50% {
+        text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+    }
+    75% {
+        text-shadow: -1px 0 #ff00ff, 1px 0 #00ffff;
+    }
+}
+
+.highlight-section {
+    position: relative; /* Важно для z-index */
+    z-index: 1; /* Поднимаем над другими элементами */
+}
+
+.highlight-section::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.226);
+    animation: highlight 2s ease-in-out;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes highlight {
+    0%, 100% {
+        opacity: 0;
+        box-shadow: 0 0 0 0 rgba(255, 0, 255, 0);
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 30px 15px rgba(255, 0, 255, 0.6);
+    }
+}
